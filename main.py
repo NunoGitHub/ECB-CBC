@@ -2,7 +2,7 @@ import numpy as np
 import os
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 import base64
-
+import os
 def GetBytesImage():
 
     key = b'1234123412341234'
@@ -24,6 +24,7 @@ def GetBytesImage():
     fh = open("3.bmp", "wb")
     fh.write(m)
     fh.close()
+    os.system("dd if=5.bmp of=3.bmp bs=1 count=54 conv=notrunc")
 
 
 # Press the green button in the gutter to run the script.
